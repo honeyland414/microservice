@@ -4,19 +4,15 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
 @Entity
-@Table(name = "users")
-public class User {
+@Data
+@Table(name="user_token")
+public class JwtToken {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "username")
     private String username;
-    @Column(name = "password")
-    private String password;
-    @Column(name = "phone")
-    private String phone;
-    @Column(name = "birthday")
-    private String birthday;
+    @Column(name = "token")
+    private String token;
 }
